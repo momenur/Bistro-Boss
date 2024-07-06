@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div>
-      <div className="px-4 bg-orange-50">
+      <div className="px-4 bg-[#B6C7AA]">
         <footer className="max-w-screen-xl py-12 mx-auto bg-muted">
           <div className="container grid grid-cols-1 gap-8 md:grid-cols-3">
             <div className="flex flex-col items-start gap-4">
@@ -94,7 +94,7 @@ const Footer = () => {
                 <div className="col-span-1 sm:col-span-1 sm:col-start-2">
                   <button
                     type="submit"
-                    className="w-full text-white bg-orange-500 btn"
+                    className="w-full text-black bg-orange-500 border-none btn"
                   >
                     Submit
                   </button>
@@ -105,7 +105,7 @@ const Footer = () => {
         </footer>
       </div>
       <div>
-        <footer className="p-4 bg-orange-100 footer footer-center text-base-content">
+        <footer className="p-4 bg-[#F6E6CB] text-black footer footer-center">
           <div>
             <p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
           </div>

@@ -114,7 +114,7 @@ const ContractNumber = () => {
     );
   }
   return (
-    <section className="w-full py-12 mt-12 bg-orange-50 md:py-24 lg:py-28">
+    <section className="w-full py-12 pt-12 bg-[#B6C7AA] md:pt-10 lg:pt-16">
       <div className="container grid items-center justify-center gap-4 px-4 text-center md:gap-8 md:px-6">
         <div className="space-y-4">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">

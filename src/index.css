@@ -27,3 +27,7 @@
   color: #d1a054;
   border-bottom: 2px solid #d1a054;
 }
+
+.react-tabs__tab--selected {
+  background-color: transparent !important;
+}

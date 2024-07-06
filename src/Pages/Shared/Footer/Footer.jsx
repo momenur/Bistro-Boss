@@ -64,7 +64,7 @@ const Footer = () => {
                     Name
                   </label>
                   <input
-                    className="px-2"
+                    className="px-2 text-black bg-white"
                     id="name"
                     placeholder="Enter your name"
                   />
@@ -74,7 +74,7 @@ const Footer = () => {
                     Email
                   </label>
                   <input
-                    className="px-2"
+                    className="px-2 text-black bg-white"
                     id="email"
                     type="email"
                     placeholder="Enter your email"
@@ -85,7 +85,7 @@ const Footer = () => {
                     Message
                   </label>
                   <textarea
-                    className="px-2 pt-2"
+                    className="px-2 pt-2 text-black bg-white"
                     id="message"
                     rows={2}
                     placeholder="Enter your message"
@@ -94,7 +94,7 @@ const Footer = () => {
                 <div className="col-span-1 sm:col-span-1 sm:col-start-2">
                   <button
                     type="submit"
-                    className="w-full text-white bg-orange-400 btn"
+                    className="w-full text-white bg-orange-500 btn"
                   >
                     Submit
                   </button>

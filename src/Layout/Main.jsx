@@ -8,7 +8,7 @@ const Main = () => {
     location.pathname.includes("login") ||
     location.pathname.includes("register");
   return (
-    <div className="min-w-full">
+    <div className="min-w-full text-black">
       {isAuthentication || <Navbar />}
       <div className="w-full bg-gradient-to-b from-gray-50 via-orange-100 to-gray-50">
         <div className="max-w-screen-xl mx-auto bg-gradient-to-b from-white via-orange-50 to-white">

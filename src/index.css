@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+#customActive a.active {
+  font: bold;
+  color: yellow;
+}
+#customActive a {
+  background-color: transparent;
+}
+
+#dashboard a.active {
+    color: white;
+  }
+#dashboard a {
+    background-color: transparent;
+  }
+#tabCustom ul{
+  display: flex;
+  justify-content: center;
+  border: none;
+  margin-bottom: 30px;
+}
+#tabCustom ul li.react-tabs__tab--selected{
+  border: none;
+  color: #D1A054;
+  border-bottom: 2px solid #D1A054;
+}
+
+

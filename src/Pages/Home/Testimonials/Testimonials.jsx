@@ -26,7 +26,7 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section>
+    <section className="px-4 py-2 bg-gray-100">
       <SectionTitle
         subHeading="what our client say"
         heading="testimonials"

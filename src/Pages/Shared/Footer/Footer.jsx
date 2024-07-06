@@ -13,7 +13,7 @@ const Footer = () => {
                 prefetch={false}
               >
                 <div>
-                  <a className="text-xl tracking-[2px] cursor-pointer">
+                  <a className="text-xl text-orange-500 font-semibold tracking-[2px] cursor-pointer">
                     BISTRO BOSS
                     <span className="block text-sm tracking-[6px] text-center uppercase">
                       Restaurant

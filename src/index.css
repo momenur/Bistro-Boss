@@ -31,3 +31,15 @@
 .react-tabs__tab--selected {
   background-color: transparent !important;
 }
+
+.bg-theme-primary {
+  background-color: #b6c7aa;
+}
+
+.text-theme-primary {
+  color: #b6c7aa;
+}
+
+.bg-theme-secondary {
+  background-color: #f6e6cb;
+}

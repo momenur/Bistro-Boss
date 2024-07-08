@@ -13,7 +13,7 @@ const FoodCard = ({ item }) => {
   const handleAddCrat = () => {
     if (user && user.email) {
       const orderItem = { foodId: _id, name, image, price, email: user.email };
-      fetch("https://bistro-server-gilt.vercel.app/carts", {
+      fetch("http://localhost:5000/carts", {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -50,7 +50,7 @@ const FoodCard = ({ item }) => {
   };
   return (
     <div data-aos="fade-up">
-      <div className="bg-white rounded-none shadow-xl card w-96">
+      <div className="bg-[#E7D4B5] shadow-xl card w-96 rounded-lg">
         <figure>
           <img
             className="border-4 border-[#B6C7AA]  relative w-[380px] h-[270px]"
@@ -67,6 +67,14 @@ const FoodCard = ({ item }) => {
           </h2>
           <p className="px-6 text-sm">{recipe}</p>
           <div className="flex justify-center">
+            <div className="absolute bottom-4">
+              <button
+                onClick={() => handleAddCrat(item)}
+                className="text-black border-t-0 border-b-4 bg-[#B6C7AA] border-s-0 border-e-0 btn btn-outline hover:text-white hover:bg-[#D1A054]"
+              >
+                Details
+              </button>
+            </div>
             <div className="absolute bottom-4">
               <button
                 onClick={() => handleAddCrat(item)}

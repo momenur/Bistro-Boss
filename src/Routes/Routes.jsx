@@ -15,6 +15,7 @@ import ManageItem from "../Pages/Dashboard/ManageItem/ManageItem";
 import UserHome from "../Pages/Dashboard/UserHome/UserHome";
 import UserReview from "../Pages/Dashboard/UserReview/UserReview";
 import Details from "../Pages/Details/Details";
+import Payment from "../Pages/Dashboard/Payment/Payment";
 
 export const router = createBrowserRouter([
   {
@@ -78,6 +79,10 @@ export const router = createBrowserRouter([
       {
         path: "userHome",
         element: <UserHome />,
+      },
+      {
+        path: "payment",
+        element: <Payment />,
       },
       {
         path: "userReview",

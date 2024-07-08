@@ -5,13 +5,17 @@ import Swal from "sweetalert2";
 import useCart from "../../../hooks/useCart";
 import { FaShoppingCart } from "react-icons/fa";
 import "./Navbar.css";
+import useAdmin from "../../../hooks/useAdmin";
 
 const Navbar = () => {
+  const [admin, isLoading] = useAdmin();
   const { user, loading, logOut } = useContext(AuthContext);
   const [cart] = useCart();
-  if (loading) {
+
+  if (loading || isLoading) {
     return <p>Loading...</p>;
   }
+
   const handleLogOut = () => {
     logOut()
       .then(() => {
@@ -39,7 +43,13 @@ const Navbar = () => {
         <NavLink to={`/order/salads`}>Order Food</NavLink>
       </li>
       <li>
-        <NavLink to="dashboard">
+        <NavLink
+          to={`${
+            admin.role === "admin"
+              ? "/dashboard/adminHome"
+              : "/dashboard/userHome"
+          }`}
+        >
           <FaShoppingCart /> Dashboard
           <div className="badge badge-secondary">+{cart?.length}</div>
         </NavLink>

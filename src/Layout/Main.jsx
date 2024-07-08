@@ -10,7 +10,7 @@ const Main = () => {
   return (
     <div className="min-w-full text-black">
       {isAuthentication || <Navbar />}
-      <div className="w-full bg-gradient-to-b from-gray-50 via-orange-100 to-gray-50">
+      <div className="w-full bg-gradient-to-b from-gray-50 via-[#B6C7AA] to-gray-50">
         <div className="max-w-screen-xl mx-auto bg-gradient-to-b from-white via-[#B6C7AA] to-white">
           <Outlet />
         </div>

@@ -12,18 +12,32 @@ import quote from "../../../assets/Home/quote.png";
 
 const Testimonials = () => {
   const [review, setReview] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  // useEffect(() => {
+  //   async function fetchMyAPI() {
+  //     let response = await fetch(
+  //       "https://server-bisto-boss.vercel.app/reviews"
+  //     );
+  //     response = await response.json();
+  //     setReview(response);
+  //   }
+
+  //   fetchMyAPI();
+  // }, []);
 
   useEffect(() => {
-    async function fetchMyAPI() {
-      let response = await fetch(
-        "https://server-bisto-boss.vercel.app/reviews"
-      );
-      response = await response.json();
-      setReview(response);
-    }
-
-    fetchMyAPI();
+    fetch("https://server-bisto-boss.vercel.app/reviews")
+      .then((res) => res.json())
+      .then((data) => {
+        setReview(data);
+        setLoading(false);
+      });
   }, []);
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
 
   return (
     <section className="px-4 py-2 bg-gray-100">

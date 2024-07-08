@@ -18,7 +18,6 @@ const Details = () => {
       .then((res) => res.json())
       .then((data) => setItem(data));
   }, []);
-  console.log(item);
 
   const handleAddCrat = () => {
     if (user && user.email) {

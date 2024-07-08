@@ -8,7 +8,7 @@ const useMenu = () => {
   } = useQuery({
     queryKey: ["menu"],
     queryFn: async () => {
-      const response = await fetch(`http://localhost:5000/menu`);
+      const response = await fetch(`https://server-bisto-boss.vercel.app/menu`);
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }

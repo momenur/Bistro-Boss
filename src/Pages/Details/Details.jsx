@@ -14,7 +14,7 @@ const Details = () => {
   console.log(menuID);
   const [item, setItem] = useState(null);
   useEffect(() => {
-    fetch(`http://localhost:5000/menu/${menuID}`)
+    fetch(`https://server-bisto-boss.vercel.app/menu/${menuID}`)
       .then((res) => res.json())
       .then((data) => setItem(data));
   }, []);
@@ -29,7 +29,7 @@ const Details = () => {
         price: item?.price,
         email: user.email,
       };
-      fetch("http://localhost:5000/carts", {
+      fetch("https://server-bisto-boss.vercel.app/carts", {
         method: "POST",
         headers: {
           "content-type": "application/json",

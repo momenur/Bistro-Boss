@@ -24,7 +24,7 @@ const Register = () => {
       updateUserProfile(data.name, data.photo)
         .then(() => {
           const saveUser = { name: data.name, email: data.email, role: "user" };
-          fetch("https://server-bisto-boss.vercel.app/users", {
+          fetch("https://server-bisto.vercel.app/users", {
             method: "POST",
             headers: {
               "content-type": "application/json",

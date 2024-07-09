@@ -13,7 +13,7 @@ const FoodCard = ({ item }) => {
   const handleAddCrat = () => {
     if (user && user.email) {
       const orderItem = { foodId: _id, name, image, price, email: user.email };
-      fetch("https://server-bisto-boss.vercel.app/carts", {
+      fetch("https://server-bisto.vercel.app/carts", {
         method: "POST",
         headers: {
           "content-type": "application/json",

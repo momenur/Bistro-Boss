@@ -6,7 +6,7 @@ const useUsers = () => {
     refetch,
     isLoading,
   } = useQuery(["users"], async () => {
-    const res = await fetch("https://server-bisto-boss.vercel.app/users");
+    const res = await fetch("https://server-bisto.vercel.app/users");
     return res.json();
   });
   return [users, refetch, isLoading];

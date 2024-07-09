@@ -14,7 +14,7 @@ const AddItem = () => {
     const category = form.category.value;
     console.log(name, price, recipe, itemPhoto, category);
     const addItem = { name, price, recipe, image: itemPhoto, category };
-    fetch("https://server-bisto-boss.vercel.app/menu", {
+    fetch("https://server-bisto.vercel.app/menu", {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -17,7 +17,7 @@ const ManageItem = () => {
       confirmButtonText: "delete!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://server-bisto-boss.vercel.app/menu/${id}`, {
+        fetch(`https://server-bisto.vercel.app/menu/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

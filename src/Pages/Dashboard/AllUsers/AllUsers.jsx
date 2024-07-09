@@ -18,7 +18,7 @@ const AllUsers = () => {
       confirmButtonText: "delete!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://server-bisto-boss.vercel.app/users/${id}`, {
+        fetch(`https://server-bisto.vercel.app/users/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -33,7 +33,7 @@ const AllUsers = () => {
   };
 
   const handleMakeAdmin = (id) => {
-    fetch(`https://server-bisto-boss.vercel.app/users/admin/${id}`, {
+    fetch(`https://server-bisto.vercel.app/users/admin/${id}`, {
       method: "PATCH",
     })
       .then((res) => res.json())

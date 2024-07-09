@@ -14,7 +14,7 @@ const Details = () => {
   console.log(menuID);
   const [item, setItem] = useState(null);
   useEffect(() => {
-    fetch(`https://server-bisto-boss.vercel.app/menu/${menuID}`)
+    fetch(`https://server-bisto.vercel.app/menu/${menuID}`)
       .then((res) => res.json())
       .then((data) => setItem(data));
   }, []);
@@ -28,7 +28,7 @@ const Details = () => {
         price: item?.price,
         email: user.email,
       };
-      fetch("https://server-bisto-boss.vercel.app/carts", {
+      fetch("https://server-bisto.vercel.app/carts", {
         method: "POST",
         headers: {
           "content-type": "application/json",

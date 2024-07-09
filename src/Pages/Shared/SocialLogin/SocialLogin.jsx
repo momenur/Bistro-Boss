@@ -18,7 +18,7 @@ const SocialLogin = () => {
         email: loggedInUser.email,
         role: "user",
       };
-      fetch("https://server-bisto-boss.vercel.app/users", {
+      fetch("https://server-bisto.vercel.app/users", {
         method: "POST",
         headers: {
           "content-type": "application/json",

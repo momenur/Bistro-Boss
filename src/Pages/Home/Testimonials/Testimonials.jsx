@@ -17,7 +17,7 @@ const Testimonials = () => {
   // useEffect(() => {
   //   async function fetchMyAPI() {
   //     let response = await fetch(
-  //       "https://server-bisto-boss.vercel.app/reviews"
+  //       "https://server-bisto.vercel.app/reviews"
   //     );
   //     response = await response.json();
   //     setReview(response);
@@ -27,7 +27,7 @@ const Testimonials = () => {
   // }, []);
 
   useEffect(() => {
-    fetch("https://server-bisto-boss.vercel.app/reviews")
+    fetch("https://server-bisto.vercel.app/reviews")
       .then((res) => res.json())
       .then((data) => {
         setReview(data);

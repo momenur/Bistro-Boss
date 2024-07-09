@@ -12,7 +12,7 @@ const useAdmin = () => {
     queryKey: ["admin", user?.email],
     queryFn: async () => {
       const response = await fetch(
-        `https://server-bisto-boss.vercel.app/users/admin/${user?.email}`
+        `https://server-bisto.vercel.app/users/admin/${user?.email}`
       );
       if (!response.ok) {
         throw new Error("Network response was not ok");

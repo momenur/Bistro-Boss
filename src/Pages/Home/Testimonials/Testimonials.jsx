@@ -11,28 +11,23 @@ import "@smastrom/react-rating/style.css";
 import quote from "../../../assets/Home/quote.png";
 
 const Testimonials = () => {
-  const [review, setReview] = useState([]);
+  const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // useEffect(() => {
-  //   async function fetchMyAPI() {
-  //     let response = await fetch(
-  //       "https://server-bisto.vercel.app/reviews"
-  //     );
-  //     response = await response.json();
-  //     setReview(response);
-  //   }
-
-  //   fetchMyAPI();
-  // }, []);
-
   useEffect(() => {
-    fetch("https://server-bisto.vercel.app/reviews")
-      .then((res) => res.json())
-      .then((data) => {
-        setReview(data);
+    const fetchReviews = async () => {
+      try {
+        const res = await fetch("https://server-bisto.vercel.app/reviews");
+        const data = await res.json();
+        setReviews(data);
+      } catch (error) {
+        console.error("Failed to fetch reviews:", error);
+      } finally {
         setLoading(false);
-      });
+      }
+    };
+
+    fetchReviews();
   }, []);
 
   if (loading) {
@@ -47,7 +42,7 @@ const Testimonials = () => {
       ></SectionTitle>
       <div className="mb-20">
         <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-          {review.map((item) => (
+          {reviews.map((item) => (
             <SwiperSlide key={item._id}>
               <div className="flex justify-center mb-2">
                 <Rating

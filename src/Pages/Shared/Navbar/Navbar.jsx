@@ -8,11 +8,11 @@ import "./Navbar.css";
 import useAdmin from "../../../hooks/useAdmin";
 
 const Navbar = () => {
-  const [admin, isLoading] = useAdmin();
+  const [admin] = useAdmin();
   const { user, loading, logOut } = useContext(AuthContext);
   const [cart] = useCart();
 
-  if (loading || isLoading) {
+  if (loading) {
     return <p>Loading...</p>;
   }
 
@@ -45,7 +45,7 @@ const Navbar = () => {
       <li>
         <NavLink
           to={`${
-            admin.role === "admin"
+            admin?.role === "admin"
               ? "/dashboard/adminHome"
               : "/dashboard/userHome"
           }`}
